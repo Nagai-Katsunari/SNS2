@@ -1,0 +1,18 @@
+<% provide(:title, 'micro') %>
+<div class="title">
+<h1>編集</h1>
+</div>
+<%= form_for @micropost, url: micropost_path(@micropost) do |f|%>
+<%= render 'shared/error_messages', object: f.object %>
+
+  <div class="titlearea">
+  <%= f.text_field :title, placeholder: "enter title" %>
+  </div>
+  
+  <div class="textarea">
+    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+  </div>
+  <div class="botan">
+  <%= f.submit "Post", class: "btn btn-primary" %>
+  </div>
+<% end %>

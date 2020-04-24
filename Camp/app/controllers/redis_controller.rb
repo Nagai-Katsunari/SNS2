@@ -1,0 +1,3 @@
+class RedisController < ApplicationController
+
+end
